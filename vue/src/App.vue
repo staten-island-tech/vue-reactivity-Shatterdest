@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { table } from '../src/assets/table.js'
 </script>
 
 <template>
-  <HelloWorld />
+  <router-view :links="table"></router-view>
 </template>
 
 <style scoped>
