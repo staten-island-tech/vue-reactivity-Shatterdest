@@ -1,9 +1,9 @@
 <script setup>
-import { table } from '../src/assets/table.js'
+import { pTable as table } from './assets/table.js'
 </script>
 
 <template>
-  <router-view :links="table"></router-view>
+  <router-view :table="table"></router-view>
 </template>
 
 <style scoped>

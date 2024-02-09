@@ -1,12 +1,41 @@
 <script setup>
+const props = defineProps(['table'])
+const table = props.table
+const elements = table.elements
 </script>
 
 <template>
   <main>
-    <h1>hello world!</h1>
+    <section id="periodic-table">
+      <div v-for="element in elements" :key="element.number">{{ element.symbol }}</div>
+    </section>
   </main>
 </template>
 
 <style scoped>
+#periodic_table {
+    width: 100%;
+    min-width: 600px;
+}
 
+#periodic_table > div {
+    margin-bottom: 2.5%;
+}
+
+#periodic_table > div > div {
+	width: 5.5%;
+	display: inline-block;
+	margin-right: -7px;
+}
+
+#periodic_table > div > div > div {
+    border: 3px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    background: red;
+    margin-top: -3px;
+    padding: 20% 0;
+}
 </style>
