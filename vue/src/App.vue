@@ -4,9 +4,11 @@ import Table from './components/Table.vue';
 </script>
 
 <template>
-  <Table :table="table"/>
+  <Table :class='table' :table="table"/>
 </template>
 
 <style scoped>
-
+.table {
+  margin: 0 0 0 0;
+}
 </style>

@@ -5,8 +5,11 @@ const elements = table.elements
 </script>
 
 <template>
-
+<div class="hi">asdiofjfjasdiofasd</div>
 </template>
 
 <style scoped>
+.hi {
+    background-color: green;
+}
 </style>

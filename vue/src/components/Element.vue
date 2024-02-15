@@ -1,5 +1,8 @@
 <template>
-    <div class="element" :class="element.type">{{ element.name }}</div>
+  <div class="element" :class="element.type">
+    <h3 class="eNum">{{ element.number }}</h3>
+    <h2 class="eSymbol">{{ element.symbol }}</h2>
+  </div>
 </template>
 
 <script setup>
@@ -8,26 +11,18 @@ const element = props.element;
 </script>
 
 <style lang="css" scoped>
-
-
+.eSymbol {
+  font-size: 2rem;
+  margin-top: 0;
+}
 .element {
   height: 4.8vw;
   width: 4.8vw;
   background-color: #cbd5e0;
   border-collapse: collapse;
-  color:black;
+  color: black;
 }
-.element-atomic-number {
-  font-size: 0.7vw;
-}
-.element-symbol {
-  font-size: 1.2vw;
-  margin-bottom: -0.1rem;
-}
-.element-name {
-  font-size: 0.65vw;
-}
-.diatomicNonmetal {
+.dia-nonmetal {
   background-color: #faf089;
 }
 .noble {
@@ -42,7 +37,7 @@ const element = props.element;
 .metalloid {
   background-color: #90cdf4;
 }
-.nonmetal {
+.poly-nonmetal {
   background-color: #81e6d9;
 }
 .tran-metal {
