@@ -6,7 +6,7 @@
         :key="element.number"
         :element="element"
         :style="{ 'grid-column': element.xpos, 'grid-row': element.ypos }"
-        @click="console.log(element)"
+        @click="openElementView(element.number)"
       />
     </section>
   </main>
@@ -14,10 +14,14 @@
 
 <script setup>
 import Element from "./Element.vue";
-import ElementView from "../views/ElementView.vue"
+import ElementView from "../views/ElementView.vue";
 const props = defineProps(["table"]);
 const table = props.table;
 const elements = table.elements;
+
+const openElementView = function (i) {
+  this.$router.push({ name: "element", params: { number: i } });
+};
 </script>
 
 <style lang="css" scoped>

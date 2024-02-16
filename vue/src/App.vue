@@ -1,10 +1,13 @@
 <script setup>
-import { pTable as table } from './assets/table.js'
-import Table from './components/Table.vue';
+import { pTable as table } from "./assets/table.js";
+import Table from "./components/Table.vue";
+import router from "./router";
 </script>
 
 <template>
-  <Table :class='table' :table="table"/>
+  <div>
+<router-view :table="table"/>    
+  </div>
 </template>
 
 <style scoped>
