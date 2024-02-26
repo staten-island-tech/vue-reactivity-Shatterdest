@@ -11,8 +11,9 @@ const element = props.element;
 </script>
 
 <style lang="css" scoped>
+
 .eSymbol {
-  font-size: 2rem;
+  font-size: 120%;
   margin-top: 0;
 }
 .element {
