@@ -15,12 +15,16 @@
 <script setup>
 import Element from "./Element.vue";
 import ElementView from "../views/ElementView.vue";
+import { useRouter, useRoute } from 'vue-router'
 const props = defineProps(["table"]);
 const table = props.table;
 const elements = table.elements;
 
+const router = useRouter()
+const route = useRoute()
+
 const openElementView = function (i) {
-  this.$router.push({ name: "element", params: { number: i } });
+  router.push({ name: "element", params: { number: i } });
 };
 </script>
 
