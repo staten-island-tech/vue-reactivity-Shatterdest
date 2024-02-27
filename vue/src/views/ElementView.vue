@@ -13,7 +13,8 @@ const element = table.elements[route.params.number - 1];
 
 function toggleFavorite() {
   if (favorites.value.includes(element.name)) {
-    console.log('removing!(not)')
+    favorites.value.splice(favorites.value.indexOf(element.name), 1)
+    console.log(favorites.value)
   } else {
     favorites.value.push(element.name)
     console.log(favorites.value)

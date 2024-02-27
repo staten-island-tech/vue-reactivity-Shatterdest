@@ -9,6 +9,7 @@
         @click="openElementView(element.number)"
       />
     </section>
+    <button @click="console.log(favorites.value)">Favorites</button>
   </main>
 </template>
 
@@ -16,6 +17,7 @@
 import Element from "./Element.vue";
 import ElementView from "../views/ElementView.vue";
 import { useRouter, useRoute } from 'vue-router'
+import { favorites } from '../assets/favorites.js'
 const props = defineProps(["table"]);
 const table = props.table;
 const elements = table.elements;
