@@ -12,11 +12,11 @@ const element = table.elements[route.params.number - 1];
 
 
 function toggleFavorite() {
-  if (favorites.value.includes(element.name)) {
-    favorites.value.splice(favorites.value.indexOf(element.name), 1)
+  if (favorites.value.includes(element.number)) {
+    favorites.value.splice(favorites.value.indexOf(element.number), 1)
     console.log(favorites.value)
   } else {
-    favorites.value.push(element.name)
+    favorites.value.push(element.number)
     console.log(favorites.value)
   }
 }
