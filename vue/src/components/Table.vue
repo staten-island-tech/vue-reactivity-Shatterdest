@@ -30,8 +30,8 @@ const openElementView = function (i) {
   router.push({ name: "element", params: { number: i } });
 };
 
-const openFavoritesView = funciton () {
-  router.push
+const openFavoritesView = function () {
+  router.push('/favorites')
 }
 </script>
 
