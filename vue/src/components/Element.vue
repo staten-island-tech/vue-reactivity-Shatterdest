@@ -2,7 +2,6 @@
   <div class="element" :class="element.type">
     <h3 class="eNum">{{ element.number }}</h3>
     <h2 class="eSymbol">{{ element.symbol }}</h2>
-    <h3 class="electron">{{ Math.round(element.atomic_mass)  }}</h3>
   </div>
 </template>
 

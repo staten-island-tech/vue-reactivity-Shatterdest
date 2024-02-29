@@ -1,13 +1,12 @@
 <template>
   <div>
     <router-link to="/" class="button">Go Back</router-link>
-    <h1
-      v-for="item in favoriteElements"
-      :key="item"
-      @click="openElementView(item.number)"
-    >
-      {{ item.name }}
-    </h1>
+    <Element
+      v-for="element in favoriteElements"
+      :key="element.number"
+      :element="element"
+      @click="openElementView(element.number)"
+    />
   </div>
 </template>
 
@@ -15,6 +14,7 @@
 import { favorites } from "../assets/favorites";
 import { pTable } from "@/assets/table";
 import router from "@/router";
+import Element from "@/components/Element.vue";
 
 const favoriteElements = [];
 pTable.elements.forEach((element) => {
@@ -28,7 +28,8 @@ const openElementView = function (i) {
 };
 </script>
 
-<style scoped>.button {
+<style scoped>
+.button {
   font-size: 2.5rem;
   border: white solid 5px;
   border-radius: 15px;
@@ -37,9 +38,11 @@ const openElementView = function (i) {
   margin-top: 5rem;
   padding: 1rem 1rem;
   transition: 0.3s all;
-  color: rgb(190, 190, 190)
+  color: rgb(190, 190, 190);
 }
 .button:hover {
   color: black;
   background-color: white;
-}</style>
+  z-index: 500;
+}
+</style>
