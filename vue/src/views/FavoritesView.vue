@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/">Go Back</router-link>
+    <router-link to="/" class="button">Go Back</router-link>
     <h1
       v-for="item in favoriteElements"
       :key="item"
@@ -28,4 +28,18 @@ const openElementView = function (i) {
 };
 </script>
 
-<style scoped></style>
+<style scoped>.button {
+  font-size: 2.5rem;
+  border: white solid 5px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  padding: 1rem 1rem;
+  transition: 0.3s all;
+  color: rgb(190, 190, 190)
+}
+.button:hover {
+  color: black;
+  background-color: white;
+}</style>

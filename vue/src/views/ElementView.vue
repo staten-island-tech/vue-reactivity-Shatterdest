@@ -24,8 +24,8 @@ function toggleFavorite() {
 
 <template>
   <div class="">
-    <router-link to="/">Go Back</router-link>
-<button @click="toggleFavorite">favorite</button>
+    <router-link to="/" class="button">Go Back</router-link>
+<button class="button" @click="toggleFavorite">favorite</button>
     <h1>{{ element }}</h1>
     <h1>Element Name: {{ element.name }}</h1>
     <h2>Element #: {{ element.number }}</h2>
@@ -36,5 +36,19 @@ function toggleFavorite() {
 </template>
 
 <style scoped>
-
+.button {
+  font-size: 2.5rem;
+  border: white solid 5px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  padding: 1rem 1rem;
+  transition: 0.3s all;
+  color: rgb(190, 190, 190)
+}
+.button:hover {
+  color: black;
+  background-color: white;
+}
 </style>

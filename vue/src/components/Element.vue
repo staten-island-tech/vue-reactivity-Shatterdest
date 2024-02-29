@@ -2,6 +2,7 @@
   <div class="element" :class="element.type">
     <h3 class="eNum">{{ element.number }}</h3>
     <h2 class="eSymbol">{{ element.symbol }}</h2>
+    <h3 class="electron">{{ Math.round(element.atomic_mass)  }}</h3>
   </div>
 </template>
 
@@ -13,7 +14,7 @@ const element = props.element;
 <style lang="css" scoped>
 
 .eSymbol {
-  font-size: 120%;
+  font-size: 125%;
   margin-top: 0;
 }
 .element {
@@ -22,6 +23,15 @@ const element = props.element;
   background-color: #cbd5e0;
   border-collapse: collapse;
   color: black;
+  transition: 0.5s all;
+  border: .1rem solid black; 
+  padding: 0.1rem .1rem; 
+  font-size: 90%
+}
+
+.element:hover {
+  transform:scale(2);
+  z-index: 500;
 }
 .dia-nonmetal {
   background-color: #faf089;
@@ -53,4 +63,6 @@ const element = props.element;
 .actinide {
   background-color: #d6bcfa;
 }
+
+
 </style>
