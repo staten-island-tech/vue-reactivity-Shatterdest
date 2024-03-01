@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <div class="main">
     <h1 class="title">The Periodic Table of Vuelements</h1>
     <NavBar/>
     <section id="periodic-table">
@@ -12,7 +12,7 @@
       />
     </section>
     <h1>{{ favorites.value }}</h1>
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -34,7 +34,7 @@ const openElementView = function (i) {
 </script>
 
 <style lang="css" scoped>
-main {
+.main {
   height: 100vh;
   width: 100vw;
 }

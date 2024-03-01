@@ -15,6 +15,7 @@ import { favorites } from "../assets/favorites";
 import { pTable } from "@/assets/table";
 import router from "@/router";
 import Element from "@/components/Element.vue";
+import NavBar from "@/components/NavBar.vue";
 
 const favoriteElements = [];
 pTable.elements.forEach((element) => {
