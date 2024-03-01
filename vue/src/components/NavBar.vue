@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="nav-container">
     <router-link class="button" to="/">Home</router-link>
     <router-link class="button" to="/favorites">Favorites</router-link>
   </div>
@@ -13,8 +13,10 @@ const router = useRouter();
 </script>
 
 <style lang="css" scoped>
-.container {
+.nav-container {
   display: block;
+  padding: 0 0;
+  margin: 0 0;
 }
 .button {
   color: white;

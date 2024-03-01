@@ -11,7 +11,6 @@
         @click="openElementView(element.number)"
       />
     </section>
-    <h1>{{ favorites.value }}</h1>
   </div>
 </template>
 

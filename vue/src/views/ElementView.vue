@@ -32,13 +32,16 @@ const toggleFavorite = function () {
 
 <template>
   <div class="container">
-    <NavBar/>
-    <button v-if="favorited" class="button" @click="toggleFavorite()">
-      Favorited!
-    </button>
-    <button v-else class="button" @click="toggleFavorite()">Favorite!</button>
+    <NavBar />
+    <div class="title-container">
+      <h1 class="title">{{ element.name }}, #{{ element.number }}</h1>
+      <button v-if="favorited" class="button" @click="toggleFavorite()">
+        Favorited!
+      </button>
+      <button v-else class="button" @click="toggleFavorite()">Favorite!</button>
+    </div>
     <!-- <h1>{{ element }}</h1> -->
-    <h1 class="title">{{ element.name }}, #{{ element.number }}</h1>
+
     <h2>Atomic Mass: {{ element.atomic_mass }}</h2>
     <h2>Appearance: {{ element.appearance }}</h2>
     <h2>Category: {{ element.category }}</h2>
@@ -50,7 +53,6 @@ const toggleFavorite = function () {
 </template>
 
 <style scoped>
-
 .container {
   height: 100vh;
   width: 100vw;
@@ -58,21 +60,27 @@ const toggleFavorite = function () {
 .title {
   font-size: 5rem;
   text-align: center;
+  display: inline;
 }
 .button {
-  font-size: 2.5rem;
-  border: white solid 5px;
+  font-size: 2rem;
+  border: var(--color-text) solid 5px;
   border-radius: 15px;
-  margin-bottom: 1rem;
-  margin-left: 10rem;
-  margin-top: 5rem;
-  padding: 1rem 1rem;
+  padding: .5rem 1.5rem;
   transition: 0.3s all;
   color: rgb(190, 190, 190);
+  margin-left: 3%;
 }
 .button:hover {
   color: black;
   background-color: white;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
 }
 
 img {
