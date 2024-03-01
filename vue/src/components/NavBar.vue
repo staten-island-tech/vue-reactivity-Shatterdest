@@ -18,7 +18,7 @@ const router = useRouter();
 }
 .button {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: 0s all;
 }
 
