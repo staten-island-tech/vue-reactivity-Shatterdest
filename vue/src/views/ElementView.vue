@@ -30,8 +30,8 @@ const toggleFavorite = function () {
 </script>
 
 <template>
-  <div class="">
-    <router-link to="/" class="button">Go Back</router-link>
+  <div class="container">
+    <NavBar/>
     <button v-if="favorited" class="button" @click="toggleFavorite()">
       Favorited!
     </button>
@@ -49,6 +49,11 @@ const toggleFavorite = function () {
 </template>
 
 <style scoped>
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
 .title {
   font-size: 5rem;
   text-align: center;

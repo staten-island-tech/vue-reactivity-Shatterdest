@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/" class="button">Go Back</router-link>
+    <NavBar />
     <Element
       v-for="element in favoriteElements"
       :key="element.number"

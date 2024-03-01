@@ -1,12 +1,7 @@
 <template>
   <main class="">
     <h1 class="title">The Periodic Table of Vuelements</h1>
-    <div class="container">
-      <router-link class="button" to="/">Home</router-link>
-      <button id="favorite-button" class="button" @click="openFavoritesView()">
-        Favorites
-      </button>
-    </div>
+    <NavBar/>
     <section id="periodic-table">
       <Element
         v-for="element in elements"
@@ -24,6 +19,8 @@
 import Element from "./Element.vue";
 import { useRouter } from "vue-router";
 import { favorites } from "../assets/favorites.js";
+import NavBar from "./NavBar.vue";
+
 const props = defineProps(["table"]);
 const table = props.table;
 const elements = table.elements;
@@ -34,9 +31,6 @@ const openElementView = function (i) {
   router.push({ name: "element", params: { number: i } });
 };
 
-const openFavoritesView = function () {
-  router.push("/favorites");
-};
 </script>
 
 <style lang="css" scoped>
@@ -58,21 +52,5 @@ main {
   margin: 0;
   top: 50%;
   left: 50%;
-}
-
-.container {
-  margin: 0 auto;
-}
-.button {
-  font-size: 2.5rem;
-  border: white solid 5px;
-  border-radius: 15px;
-  padding: 1rem 1rem;
-  transition: 0.3s all;
-  color: rgb(190, 190, 190);
-}
-.button:hover {
-  color: black;
-  background-color: white;
 }
 </style>
