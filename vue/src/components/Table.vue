@@ -1,7 +1,7 @@
 <template>
   <div class="main">
+    <NavBar />
     <h1 class="title">The Periodic Table of Vuelements</h1>
-    <NavBar/>
     <section id="periodic-table">
       <Element
         v-for="element in elements"
@@ -29,7 +29,6 @@ const router = useRouter();
 const openElementView = function (i) {
   router.push({ name: "element", params: { number: i } });
 };
-
 </script>
 
 <style lang="css" scoped>

@@ -1,12 +1,16 @@
 <template>
   <div>
     <NavBar />
-    <Element
-      v-for="element in favoriteElements"
-      :key="element.number"
-      :element="element"
-      @click="openElementView(element.number)"
-    />
+    <h1 class="title">Favorite Elements!</h1>
+    <div v-if="favoriteElements.length > 0">
+      <Element
+        v-for="element in favoriteElements"
+        :key="element.number"
+        :element="element"
+        @click="openElementView(element.number)"
+      />
+    </div>
+    <p v-else>you have no favorite elements :(</p>
   </div>
 </template>
 
@@ -45,5 +49,10 @@ const openElementView = function (i) {
   color: black;
   background-color: white;
   z-index: 500;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
 }
 </style>
