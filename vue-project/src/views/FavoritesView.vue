@@ -34,6 +34,8 @@ const openElementView = function (i) {
 </script>
 
 <style scoped>
+@import url("../assets/base.css");
+
 .button {
   font-size: 2.5rem;
   border: white solid 5px;

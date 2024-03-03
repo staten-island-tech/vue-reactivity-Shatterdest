@@ -32,6 +32,7 @@ const openElementView = function (i) {
 </script>
 
 <style lang="css" scoped>
+
 .main {
   height: 100vh;
   width: 100vw;

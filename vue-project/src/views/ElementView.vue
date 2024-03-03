@@ -53,6 +53,8 @@ const toggleFavorite = function () {
 </template>
 
 <style scoped>
+
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -68,12 +70,12 @@ const toggleFavorite = function () {
   border-radius: 15px;
   padding: .5rem 1.5rem;
   transition: 0.3s all;
-  color: rgb(190, 190, 190);
+  color: black;
   margin-left: 3%;
 }
 .button:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: var(--color-background);
 }
 
 .title-container {
