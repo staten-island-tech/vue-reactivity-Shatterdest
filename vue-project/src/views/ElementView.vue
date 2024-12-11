@@ -49,6 +49,7 @@ const toggleFavorite = function () {
     <h2>Block: {{ element.block.toUpperCase() }}</h2>
     <h2>Description: {{ element.summary }}</h2>
     <img :src="element.bohr_model_image" :alt="element.name" />
+    <img :src="element.image.url" :alt="element.image.title" />
   </div>
 </template>
 
